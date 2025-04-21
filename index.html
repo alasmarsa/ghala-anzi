@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>التسجيل في المعهد</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      direction: rtl;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      height: 100px;
+      margin-left: 350px;
+    }
+
+    .container {
+      display: flex;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .map-section, .form-section {
+      flex: 1;
+      padding: 20px;
+      margin: 10px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .map-section iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #004080;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #003060;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="png.png" alt="شعار المعهد">
+    <h1>  التسجيل في معهد الشمال الثقافي العالي لتدريب</h1>
+  </header>
+
+  <div class="container">
+    <!-- موقع المعهد -->
+    <div class="map-section">
+      <h2>موقع المعهد</h2>
+      <iframe 
+        src="https://www.google.com/maps?q=31.31184053632789,37.34429126071413&hl=ar&z=14&output=embed">
+      </iframe>
+    </div>
+
+    <!-- نموذج التسجيل -->
+    <div class="form-section">
+      <h2>بيانات المتقدم للتسجيل</h2>
+      <form action="https://formsubmit.co/alasmar2saleh@gmail.com" method="POST">
+        <!-- تمنع ظهور صفحة FormSubmit بعد الإرسال -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- توجه المستخدم لصفحة شكر بعد الإرسال -->
+		<input type="hidden" name="_next" value="https://alasmarsa.github.io/ghala-anzi/thanks.html">
+
+        <input type="hidden" name="_next" value="https://اسم_المستخدم.github.io/اسم_المستودع/thanks.html">
+
+
+        <div class="form-group">
+          <label for="name">الاسم الثلاثي:</label>
+          <input type="text" id="name" name="الاسم الثلاثي" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">رقم الجوال:</label>
+          <input type="tel" id="phone" name="رقم الجوال" required>
+        </div>
+        <div class="form-group">
+          <label for="email">الإيميل:</label>
+          <input type="email" id="email" name="الإيميل" required>
+        </div>
+        <div class="form-group">
+          <label for="major">التخصص المطلوب دراسته:</label>
+          <select id="major" name="التخصص المطلوب">
+            <option value="برمجة">برمجة</option>
+            <option value="شبكات">شبكات</option>
+            <option value="إدارة أعمال">إدارة أعمال</option>
+            <option value="محاسبة">محاسبة</option>
+          </select>
+        </div>
+        <button type="submit">إرسال الطلب</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
